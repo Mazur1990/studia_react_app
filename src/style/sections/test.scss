@@ -1,0 +1,23 @@
+#treningi{
+    background-color: black;
+    .trening_container{
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        img{
+            max-width: 150px;
+            clip-path: polygon(25% 20%, 75% 20%, 95% 50%, 75% 80%, 25% 80%, 5% 50%);
+            border: 1px solid;
+            border-color: coral
+        }
+        h2{
+            padding:5px;
+            margin-bottom: 5px;
+        }
+        p{
+            padding: 5px;
+            text-align: center;
+    
+        }
+    }
+}
