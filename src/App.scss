@@ -1,4 +1,15 @@
+// Presets
 @import 
 './style/preset.scss',
 './style/typography.scss',
-'./style/sections/home.scss';
+'./style/nav.scss';
+
+//Home styling
+
+@import
+'./style/sections/Home/header.scss',
+'./style/sections/Home/section_one.scss',
+'./style/sections/Home/section_two.scss',
+'./style/sections/Home/section_three.scss',
+'./style/sections/Home/section_four.scss',
+'./style/sections/Home/section_five.scss';

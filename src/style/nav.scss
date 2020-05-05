@@ -1,0 +1,19 @@
+nav{
+    position: fixed !important;
+    width: 100%;
+    z-index: 1;
+    
+    img{
+        margin-left:50px;
+    }
+    div{
+        font-family: $fontFamily;
+        ul{
+            width: 100%;
+            li{
+                margin-left: 2%;
+                width: 75px;
+            }
+        }
+    }
+}

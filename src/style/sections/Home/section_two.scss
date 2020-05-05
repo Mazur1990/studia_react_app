@@ -1,0 +1,22 @@
+#oNas{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    .row{
+        align-items: center;
+        .oNas_content-image {
+            overflow: hidden;
+            // max-width: 400px;
+            img{
+                height: 500px;
+                width: auto;
+            }
+        }
+        .oNas_content-text{
+            flex-direction: column;
+            h2{
+                text-align: justify;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+#galeria{
+
+
+    .grid{
+        max-height: 250px;
+        width: auto;
+        padding:0;
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        overflow: hidden;
+         .grid-image {
+             width: 100%;
+             transition: all .6s ease;
+             cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
+                }
+         }
+         
+    }
+}

@@ -14,7 +14,7 @@ function App() {
   return (
       <Router>
 
-        <section>
+        <div>
             <Nav/>
             <Switch>
             <Route exact path="/" component={Home} />
@@ -23,7 +23,7 @@ function App() {
             <Route component={PageNotFound} />
             </Switch>
 
-        </section>
+        </div>
         <Footer/>
       </Router>
   );

@@ -8,19 +8,19 @@ const SectionFour = () => {
             <div class="container">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
-                        {/* <img src="./images/final-logo-example.png" alt=""></img> */}
+                        <img src="./images/final-logo-example.png" alt=""/>
                     </div>
                     <div class="col d-flex justify-content-center">
-                        {/* <img src="./images/final-logo-example.png" alt=""></img> */}
+                        <img src="./images/final-logo-example.png" alt="" />
                     </div>
                     <div class="col d-flex justify-content-center">
-                        {/* <img src="./images/final-logo-example.png" alt=""></img> */}
+                        <img src="./images/final-logo-example.png" alt="" />
                     </div>
                     <div class="col d-flex justify-content-center">
-                        {/* <img src="./images/final-logo-example.png" alt=""></img> */}
+                        <img src="./images/final-logo-example.png" alt="" />
                     </div>
                     <div class="col d-flex justify-content-center">
-                        {/* <img src="./images/final-logo-example.png" alt=""></img> */}
+                        <img src="./images/final-logo-example.png" alt="" />
                     </div>
                 </div>
             </div>
