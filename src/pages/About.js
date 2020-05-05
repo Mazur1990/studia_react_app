@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+const test = 20
 
 const About = () => {
     return (
@@ -15,7 +15,7 @@ const About = () => {
                 </div>
                 <div class="col d-flex justify-content-center trening_container">
                     {/* <img src="./images/treningi/4831.jpg" alt=""></img> */}
-                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <h2>Lorem ipsum dolor sit amet.{test}</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae modi fugit, sint velit distinctio alias cumque itaque veritatis harum quibusdam eveniet corrupti unde ab illum ipsam ad voluptatibus molestias odit.</p>
                     <button class="btn">Więcej</button>
                 </div>

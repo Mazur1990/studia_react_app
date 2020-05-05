@@ -42,3 +42,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+section{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.btn{
+    // font-family: $fontFamily;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:red;
+    // background-color: red;
+    border: 3px solid ;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px 30px;
+    &:hover{
+        color:white;
+    }
+}

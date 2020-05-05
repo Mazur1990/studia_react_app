@@ -1,0 +1,94 @@
+nav{
+    position: fixed !important;
+    width: 100%;
+    z-index: 1;
+    a{
+        margin-left: 2%;
+    }
+    div{
+        font-family: $fontFamily;
+        ul{
+            width: 100%;
+            li{
+                margin-left: 2%;
+                width: 75px;
+            }
+        }
+    }
+}
+
+#oNas{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.185);
+    .row{
+        align-items: center;
+        .oNas_content-image {
+            img{
+                height: 525px;
+                width: auto;
+            }
+        }
+        .oNas_content-text{
+            flex-direction: column;
+            h2{
+                text-align: justify;
+            }
+        }
+    }
+}
+
+#treningi{
+    background-color: black;
+    .trening_container{
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        img{
+            max-width: 150px;
+            clip-path: polygon(25% 20%, 75% 20%, 95% 50%, 75% 80%, 25% 80%, 5% 50%);
+            border: 1px solid;
+            border-color: coral
+        }
+        h2{
+            padding:5px;
+            margin-bottom: 5px;
+        }
+        p{
+            padding: 5px;
+            text-align: center;
+    
+        }
+    }
+}
+
+
+.video_container{
+    display: flex;
+   justify-content: center;
+   height: 100vh;
+   width: 100%;
+
+#video {
+   filter: grayscale(.8);
+   min-width: 100%;
+   min-height: 100%;
+   object-fit: cover;
+ }
+}
+
+
+#titleText{
+ position: absolute;
+ top:75%;
+ left: 40%;
+ right: 10%;
+ h1{
+   font-size: 2.5rem !important;
+   text-transform: uppercase;
+   color: #ffff;
+   font-weight: 700;
+   font-family: 'Roboto', sans-serif;
+
+ }
+}
