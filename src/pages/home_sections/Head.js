@@ -10,7 +10,7 @@ const Head = () => {
                 </video>
             </div>
             <div id="titleText">
-                <h1>Przygodę z boksem może rozpocząć każdy niezależnie od wieku!</h1>
+                <h1>Lorem ipsum dolor sit amet. Est assumenda facilis consequuntur!</h1>
             </div>
         </header>
     )

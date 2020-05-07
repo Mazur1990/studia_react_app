@@ -6,8 +6,10 @@ import './App.scss';
 import {Nav} from './components/Nav'
 import {Home} from './pages/Home'
 import {About} from './pages/About'
-import {Footer} from './pages/Footer'
+import {Activities} from './pages/Activities'
+import {Pricing} from './pages/Pricing'
 import {Contact} from './pages/Contact'
+import {Footer} from './components/Footer'
 import {PageNotFound } from './pages/PageNotFound'
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
             <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/activities" component={Activities} />
             <Route path="/contact" component={Contact} />
             <Route component={PageNotFound} />
             </Switch>

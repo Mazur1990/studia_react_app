@@ -2,7 +2,8 @@
 @import 
 './style/preset.scss',
 './style/typography.scss',
-'./style/nav.scss';
+'./style/nav.scss',
+'./style/footer.scss';
 
 //Home styling
 
@@ -11,5 +12,14 @@
 './style/sections/Home/section_one.scss',
 './style/sections/Home/section_two.scss',
 './style/sections/Home/section_three.scss',
-'./style/sections/Home/section_four.scss',
-'./style/sections/Home/section_five.scss';
+'./style/sections/Home/section_four.scss';
+
+
+//About styling
+@import
+'./style/sections/About/about_section_one.scss',
+'./style/sections/About/about_section_two.scss';
+
+//Activities styling
+@import
+'./style/sections/Activities/activities_section_one.scss'

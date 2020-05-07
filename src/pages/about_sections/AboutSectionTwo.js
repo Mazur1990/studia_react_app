@@ -1,26 +1,26 @@
 import React from 'react';
+import imgaeSrc from '../../images/About_sections/aboutSectionTwo/final-logo-example.png'
 
-
-const SectionFour = () => {
+const AboutSectionTwo = () => {
     return (
         <section id="partnerzy">
-            <h1>Partnerzy</h1>
+            <h1>PPartnership</h1>
             <div class="container">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
-                        <img src="./images/final-logo-example.png" alt=""/>
+                        <img src={imgaeSrc} alt=""/>
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <img src="./images/final-logo-example.png" alt="" />
+                        <img src={imgaeSrc} alt="" />
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <img src="./images/final-logo-example.png" alt="" />
+                        <img src={imgaeSrc} alt="" />
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <img src="./images/final-logo-example.png" alt="" />
+                        <img src={imgaeSrc} alt="" />
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <img src="./images/final-logo-example.png" alt="" />
+                        <img src={imgaeSrc} alt="" />
                     </div>
                 </div>
             </div>
@@ -28,4 +28,4 @@ const SectionFour = () => {
     )
 }
 
-export {SectionFour}
+export {AboutSectionTwo}
