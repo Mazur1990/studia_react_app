@@ -3,10 +3,10 @@ import React from 'react';
 const ActivitiesSectionOne = () => {
     return (
         <section id="activities">
-            <div class="column">
-                <div class="row">
+            <div className="column">
+                <div className="row">
                     <h1>Activities</h1>
-                    <table class="table table-hover table-dark" id="table">
+                    <table className="table table-hover table-dark" id="table">
                         <thead>
                             <tr>
                             <th scope="col">#</th>

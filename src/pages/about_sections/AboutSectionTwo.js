@@ -5,21 +5,21 @@ const AboutSectionTwo = () => {
     return (
         <section id="partnerzy">
             <h1>PPartnership</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
+            <div className="container">
+                <div className="row">
+                    <div className="col d-flex justify-content-center">
                         <img src={imgaeSrc} alt=""/>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div className="col d-flex justify-content-center">
                         <img src={imgaeSrc} alt="" />
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div className="col d-flex justify-content-center">
                         <img src={imgaeSrc} alt="" />
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div className="col d-flex justify-content-center">
                         <img src={imgaeSrc} alt="" />
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div className="col d-flex justify-content-center">
                         <img src={imgaeSrc} alt="" />
                     </div>
                 </div>
