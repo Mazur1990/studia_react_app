@@ -7,7 +7,7 @@ import {Nav} from './components/Nav'
 import {Home} from './pages/Home'
 import {About} from './pages/About'
 import {Activities} from './pages/Activities'
-import {Pricing} from './pages/Pricing'
+import {Weather} from './pages/Weather'
 import {Contact} from './pages/Contact'
 import {Footer} from './components/Footer'
 import {PageNotFound } from './pages/PageNotFound'
@@ -22,6 +22,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/activities" component={Activities} />
+            <Route path="/weather" component={Weather} />
             <Route path="/contact" component={Contact} />
             <Route component={PageNotFound} />
             </Switch>
