@@ -1,4 +1,5 @@
 import React from 'react';
+import {Gallery} from './home_components/Gallery'
 import imgSrcOne from '../../images/Home_Sections/SectionThree/1.jpg'
 import imgSrcTwo from '../../images/Home_Sections/SectionThree/2.jpg'
 import imgSrcThree from '../../images/Home_Sections/SectionThree/3.jpg'
@@ -13,32 +14,16 @@ const SectionThree = () => {
 <section id="galeria">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcEight} className="grid-image" />
-                    </div>
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcTwo} className="grid-image" />
-                    </div>
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcThree} className="grid-image" />
-                    </div>
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcFour} className="grid-image" />
-                    </div>
+                    <Gallery image={imgSrcEight} />
+                    <Gallery image={imgSrcTwo} />
+                    <Gallery image={imgSrcThree} />
+                    <Gallery image={imgSrcFour} />
                 </div>  
-                <div className="row d-flex justify-content-center">
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcFive} className="grid-image" />
-                    </div>
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcSix} className="grid-image" />
-                    </div>
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcSeven} className="grid-image" />
-                    </div>
-                    <div className="col-12 col-sm grid">
-                        <img src={imgSrcEight} className="grid-image" />
-                    </div>
+                <div className="row">
+                    <Gallery image={imgSrcFive} />
+                    <Gallery image={imgSrcSix} />
+                    <Gallery image={imgSrcSeven} />
+                    <Gallery image={imgSrcEight} />
                 </div>
             </div>
     </section>

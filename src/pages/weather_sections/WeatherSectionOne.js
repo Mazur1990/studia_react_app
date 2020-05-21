@@ -1,4 +1,9 @@
 import React from 'react';
+import {WeatherIcon} from './weather_components/WeatherIcon'
+import {WeatherTemp} from './weather_components/WeatherTemp'
+import {WeatherDay} from './weather_components/WeatherDay'
+import {WeatherTextSpan} from './weather_components/WeatherTextSpan'
+
 
 const WeatherSectionOne = () => {
     return ( 
@@ -16,27 +21,22 @@ const WeatherSectionOne = () => {
 
                     <div className="mainParam d-flex justify-content-center">
                         <div className="col d-flex mainParam-left">
-                            <div className="temp">
-                                <h2>9*C</h2>
-                            </div>
-                            <div className="icon">
-                                <img src="https://img.icons8.com/ios/50/000000/cloud.png"/>
-                            </div>
+                            <WeatherTemp temperature="9*C"/>
+                            <WeatherIcon icon="https://img.icons8.com/ios/50/000000/cloud.png"/>
                         </div>
                         <div className="col d-flex mainParam-right ">
-                              
                                 <ul>
                                     <li>
-                                        <span>test 1</span>
-                                        <span>test 2</span>
+                                        <WeatherTextSpan text="test"/>
+                                        <WeatherTextSpan text="test"/>
                                     </li>
                                     <li>
-                                        <span>test 1</span>
-                                        <span>test 2</span>
+                                        <WeatherTextSpan text="test"/>
+                                         <WeatherTextSpan text="test"/>
                                     </li>
                                     <li>
-                                        <span>test 1</span>
-                                        <span>test 2</span>
+                                        <WeatherTextSpan text="test"/>
+                                        <WeatherTextSpan text="test"/>
                                     </li>
                                 </ul>
                         </div>
@@ -48,40 +48,36 @@ const WeatherSectionOne = () => {
                         <div className="col d-flex justify-content-center">
                             <ul>
                                 <li>
-                                    <div>pon</div>
-                                    <div>
-                                    <img src="https://img.icons8.com/ios/50/000000/cloud.png"/>
-                                    </div>
-                                    <div>9*C</div>
+                                    <WeatherDay day="Poniedziałek" />
+                                    <WeatherIcon icon="test"/>
+                                    <WeatherTemp temperature="9*C" />
                                 </li>
                                 <li>
-                                    <div>wtorek</div>
-                                    <div> 
-                                    <img src="https://img.icons8.com/ios/50/000000/cloud.png"/>
-                                    </div>
-                                    <div>test 2</div>
+                                    <WeatherDay day="Wtorek" />
+                                    <WeatherIcon icon="test"/>
+                                    <WeatherTemp />
                                 </li>
                                 <li>
-                                    <div>test 1</div>
-                                    <div> 
-                                        <img src="https://img.icons8.com/ios/50/000000/cloud.png"/> 
-                                        </div>
-                                    <div>test 2</div>
+                                    <WeatherDay day="Wtorek" />
+                                    <WeatherIcon icon="test"/>
+                                    <WeatherTemp />
                                 </li>
                                 <li>
-                                    <div>test 1</div>
-                                    <div> 
-                                        <img src="https://img.icons8.com/ios/50/000000/cloud.png"/> 
-                                        </div>
-                                    <div>test 2</div>
+                                    <WeatherDay day="Wtorek" />
+                                    <WeatherIcon icon="test"/>
+                                    <WeatherTemp />
                                 </li>
                                 <li>
-                                    <div>test 1</div>
-                                    <div> 
-                                        <img src="https://img.icons8.com/ios/50/000000/cloud.png"/> 
-                                        </div>
-                                    <div>test 2</div>
+                                    <WeatherDay day="Wtorek" />
+                                    <WeatherIcon icon="test"/>
+                                    <WeatherTemp />
                                 </li>
+                                <li>
+                                    <WeatherDay day="Wtorek" />
+                                    <WeatherIcon icon="test"/>
+                                    <WeatherTemp />
+                                </li>
+                           
                             </ul>
                         </div>
                     </div>
