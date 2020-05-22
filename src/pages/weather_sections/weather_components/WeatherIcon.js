@@ -3,7 +3,7 @@ import React from 'react';
 const WeatherIcon = (props) => {
     return ( 
         <div className="icon">
-            <img src={props.icon}/>
+            <img src={props.icon} alt=""/>
         </div>               
     )
 }

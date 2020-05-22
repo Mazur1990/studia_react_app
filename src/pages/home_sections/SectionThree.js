@@ -1,6 +1,5 @@
 import React from 'react';
 import {Gallery} from './home_components/Gallery'
-import imgSrcOne from '../../images/Home_Sections/SectionThree/1.jpg'
 import imgSrcTwo from '../../images/Home_Sections/SectionThree/2.jpg'
 import imgSrcThree from '../../images/Home_Sections/SectionThree/3.jpg'
 import imgSrcFour from '../../images/Home_Sections/SectionThree/4.jpg'

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const WeatherTemp = (props) => {
-    return ( 
-        <div className="temp">
-            <h2>{props.temperature}</h2>
-        </div>               
-    )
+class WeatherTemp extends Component {
+    render(){
+
+        return ( 
+            <div className="temp">
+                <h2>{this.props.temperature} *C</h2>
+            </div>               
+        )
+    }
 }
 
 export { WeatherTemp }
