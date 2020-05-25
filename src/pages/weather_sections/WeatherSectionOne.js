@@ -15,9 +15,7 @@ class WeatherSectionOne extends Component{
         },
         days: []
     }
-    handleInputInfo = (e) => {
- 
-    }
+  
     handleInfo = () => {
         const value = this.refs.city.value
 
@@ -25,16 +23,18 @@ class WeatherSectionOne extends Component{
         .then(res => res.json())
         .then(temp => {
             temp = temp.list
+            console.log(temp)
             this.setState({current: temp[0], days: temp.slice(1, 6)})
             // console.log(temp)
         })
-        .catch(err => alert("not bangla"))
+        .catch(err => alert("nie bangla"))
             
 
     }
 
     render(){
         const {current, days} =this.state
+      
         return ( 
             <section id = "weather">
                 <div className = "container">
@@ -50,7 +50,8 @@ class WeatherSectionOne extends Component{
         
                             <div className="mainParam d-flex justify-content-center">
                                 <div className="col d-flex mainParam-left">
-                                    <WeatherTemp temperature={current.main ? current.main.temp : 0}/>
+                                {/* current.main ? current.main.temp : 0 */}
+                                    <WeatherTemp temperature={ current.main ? (Math.floor(current.main.temp - 273.15)) : 0}/>
                                    {current.weather && <WeatherIcon icon={`http://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`}/>} 
                                 </div>
                                 <div className="col d-flex mainParam-right ">
@@ -72,15 +73,16 @@ class WeatherSectionOne extends Component{
                             </div>
                             <div className="sideParam">
                                 <div className="col d-flex justify-content-center">
-                                    <h3>Terminowa</h3>
+                                    <h3>Godzinowa</h3>
                                 </div>
                                 <div className="col d-flex justify-content-center">
                                     <ul>
                                         {days.map(item => 
                                              <li>
-                                                <WeatherDay day={item.dt_txt} />
+                                                <WeatherDay day={item.dt_txt.slice(11,16)} />
+                                                {console.log(item.dt_txt.slice(11,16))}
                                                 <WeatherIcon icon={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}/>
-                                                <WeatherTemp temperature={item.main.temp} />
+                                                <WeatherTemp temperature={(Math.floor(item.main.temp - 273.15))} />
                                               </li>
                                             )}
                                        
