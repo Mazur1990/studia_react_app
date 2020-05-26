@@ -2,7 +2,7 @@ import React from 'react';
 
 const WeatherTextSpan = (props) => {
     return ( 
-            <span>{props.text}</span>
+            <span>{props.text}{props.sign}</span>
     )
 }
 

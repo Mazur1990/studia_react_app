@@ -7,7 +7,7 @@ $fontFamily: 'Lato', sans-serif;
 html{
     font-size: 1rem;
 }
-h1,h2,h3,h4.h5.h6,p {
+h1,h2,h3,h4.h5.h6,p, span,input {
     font-family: $fontFamily
 }
 p{
@@ -49,4 +49,3 @@ a{
         text-decoration: none;
     }
 }
-

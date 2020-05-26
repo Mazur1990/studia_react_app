@@ -9,6 +9,7 @@ class WeatherSectionOne extends Component{
         current:{
             "temp": 0,
             "date": "",
+            // "humidity":"?"
             //wartosci poczatkowe z API wtedy nei trzeba ifow w konstrukcji
             // main:{temp:0}
             //weather:[]
@@ -56,18 +57,21 @@ class WeatherSectionOne extends Component{
                                 </div>
                                 <div className="col d-flex mainParam-right ">
                                         <ul>
+                                            
                                             <li>
-                                                <WeatherTextSpan text="test"/>
-                                                <WeatherTextSpan text="test"/>
+                                                <WeatherTextSpan text="Wilgotnotność"/>
+                                              {current.main && <WeatherTextSpan text={current.main.humidity} sign=" %"/> }  
                                             </li>
-                                            {/* <li>
-                                                <WeatherTextSpan text="test"/>
-                                                 <WeatherTextSpan text="test"/>
+                                            
+                                        
+                                            <li>
+                                            <WeatherTextSpan text="Prędkość wiatru"/>
+                                              {current.wind && <WeatherTextSpan text={current.wind.speed} sign=" m/s" /> }  
                                             </li>
                                             <li>
-                                                <WeatherTextSpan text="test"/>
-                                                <WeatherTextSpan text="test"/>
-                                            </li> */}
+                                            <WeatherTextSpan text="Ciśnienie"/>
+                                              {current.main && <WeatherTextSpan text={current.main.pressure} sign=" hPa" /> }  
+                                            </li>
                                         </ul>
                                 </div>
                             </div>
@@ -80,7 +84,6 @@ class WeatherSectionOne extends Component{
                                         {days.map(item => 
                                              <li>
                                                 <WeatherDay day={item.dt_txt.slice(11,16)} />
-                                                {console.log(item.dt_txt.slice(11,16))}
                                                 <WeatherIcon icon={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}/>
                                                 <WeatherTemp temperature={(Math.floor(item.main.temp - 273.15))} />
                                               </li>
