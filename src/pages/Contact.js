@@ -1,10 +1,12 @@
 import React from 'react';
-
+import {ContactSectionOne} from './contact_sections/ContactSectionOne'
 
 
 const Contact = () => {
     return (
-       <div>Contact</div>
+       <>
+       <ContactSectionOne />
+       </>
     )
 }
 

@@ -42,10 +42,10 @@ class WeatherSectionOne extends Component{
                     <div className = "row information">
                         <div className="col-12 weatherTable">
                                 <div className="col d-flex stify-cojustify-content-center titleAndSearch">
-                                    <h1>Pogoda na dzisiejszy trening</h1>
+                                    <h1>Weather for todays training</h1>
                                     <div className="col d-flex juntent-center titleAndSearch">
-                                        <input placeholder="Wpisz nazwę miejscowości" ref="city"></input>
-                                        <button className="btn" onClick={this.handleInfo}>Szukaj</button>
+                                        <input placeholder="Choose your city" ref="city"></input>
+                                        <button className="btn" onClick={this.handleInfo}>Search</button>
                                     </div>
                                 </div>
         
@@ -59,17 +59,17 @@ class WeatherSectionOne extends Component{
                                         <ul>
                                             
                                             <li>
-                                                <WeatherTextSpan text="Wilgotnotność"/>
+                                                <WeatherTextSpan text="Humidity"/>
                                               {current.main && <WeatherTextSpan text={current.main.humidity} sign=" %"/> }  
                                             </li>
                                             
                                         
                                             <li>
-                                            <WeatherTextSpan text="Prędkość wiatru"/>
+                                            <WeatherTextSpan text="Wind speed"/>
                                               {current.wind && <WeatherTextSpan text={current.wind.speed} sign=" m/s" /> }  
                                             </li>
                                             <li>
-                                            <WeatherTextSpan text="Ciśnienie"/>
+                                            <WeatherTextSpan text="Pressure"/>
                                               {current.main && <WeatherTextSpan text={current.main.pressure} sign=" hPa" /> }  
                                             </li>
                                         </ul>
@@ -77,7 +77,7 @@ class WeatherSectionOne extends Component{
                             </div>
                             <div className="sideParam">
                                 <div className="col d-flex justify-content-center">
-                                    <h3>Godzinowa</h3>
+                                    <h3>In next hours</h3>
                                 </div>
                                 <div className="col d-flex justify-content-center">
                                     <ul>
