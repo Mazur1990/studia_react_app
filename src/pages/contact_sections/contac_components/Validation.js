@@ -1,13 +1,11 @@
 import React from 'react';
+const Validation = ({className, validation, isValid =false, children}) => {
 
-const Validation = ({styling,validation, children}) => {
     return ( 
-        <div className={styling} data-validate={validation}>
+        <div className={[className, isValid ? " alert-validate" :""]} data-validate={validation} >
             {children}
        </div>      
     )
 }
 
 export { Validation }
-
-// wrap-input100 rs1-wrap-input100 validate-input

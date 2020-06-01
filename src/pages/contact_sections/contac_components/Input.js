@@ -1,27 +1,28 @@
-import React, {useState} from 'react';
-
-const Input = ({id, placeholder}) => {
-    const [name, setName] = useState(false)
-
-    const handleFunction =() =>{
-        setName("lol")
-        console.log(name)
+import React, { forwardRef } from 'react';
 
 
-        if(name===false){
-            console.log('nie bangla')
-        }else if (name===true){
-            console.log('dziala')
-        }
-    }
 
+
+
+
+
+const Input = forwardRef(({ id, placeholder, name, type="text"}, ref) => {
 
     return ( 
-        
-
-            <input id={id} className="input100" type="text"  placeholder={placeholder} text={name} onChange={handleFunction}/>  
-        
+            <input   id={id} className="input100" type={type}  placeholder={placeholder}  name={name} ref={ref}/>  
     )
-}
 
+})
 export { Input }
+
+
+// VALIDATION
+
+// const Input = ({id, className, type, placeholder, name, ref}) => {
+
+//     return ( 
+//         <input id={id} className={className} type={type} placeholder={placeholder}  name={name} ref={ref}/>
+//     )
+// }
+// export { Input }
+

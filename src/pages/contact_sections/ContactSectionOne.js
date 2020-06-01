@@ -1,54 +1,77 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Label} from './contac_components/Label'
 import {Validation} from './contac_components/Validation'
 import { Input } from './contac_components/Input';
 import { Focus } from './contac_components/Focus';
+import { useForm } from "react-hook-form";
 
 
 
-
-// const name = document.getElementById('first-name')
-// const lastName = document.getElementById('last-name')
-// const email = document.getElementById('email')
-// const message = document.getElementById('message')
 
 
 const ContactSectionOne = () => {
+
+	const {handleSubmit, register, errors, reset} = useForm();
+ 
+
+
+
+	const onSubmit = (data) => {
+		alert('Message has been sent')
+
+		reset();
+		
+	}
+
+
 
 		return (
 			<section id="kontakt">
 			   <div class="container-contact100">
 			<div class="wrap-contact100">
-				<form id="form" class="contact100-form validate-form" >
+				<form noValidate id="form" class="contact100-form validate-form" onSubmit={handleSubmit(onSubmit)}>
 					<span class="contact100-form-title">
 						Send Us A Message
 					</span>
-					<Label for="first-name" title="Tell us your name *" />
-					<Validation styling="wrap-input100 rs1-wrap-input100 validate-input alert-validate" data-validate="Type first name">
-						<Input id="first-name"  placeholder="First name" />
+
+					
+					{/* <Label for="first-name" title="Tell us your name *" />
+					<Validation className={'wrap-input100 rs1-wrap-input100 validate-input'  } data-validate="Type first name" isValid={errors && errors.firstName && "alert-validate"}>
+						<Input id="first-name"  placeholder="First name" name="firstName" ref={register({required: true})}/>
+						<Focus />
+					</Validation>
+				//nawiasy []
+					<Validation className={["wrap-input100 rs1-wrap-input100 validate-input ", addClass]}>
+						<Input id="last-name"  placeholder="Last name" name="lastName" ref={register({required: true})}/>
+						<Focus />
+					</Validation> */}
+
+				<Label for="first-name" title="Tell us your name *" />
+					<Validation className={'wrap-input100 rs1-wrap-input100 validate-input' } data-validate="Type first name" isValid={errors && errors.firstName}>
+						<Input id="first-name"  placeholder="First name" name="firstName" ref={register({required: true})}/>
 						<Focus />
 					</Validation>
 				
-					<Validation styling="wrap-input100 rs1-wrap-input100 validate-input">
-						<Input id="last-name"  placeholder="Last name" />
+					<Validation className={["wrap-input100 rs1-wrap-input100 validate-input "]} isValid={errors && errors.lastName}>
+						<Input id="last-name"  placeholder="Last name" name="lastName" ref={register({required: true})}/>
 						<Focus />
 					</Validation>
 				
 					<Label for="email" title="Enter your email *" />
-					<Validation styling="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz"> 
-						<Input id="email" type="text" placeholder="Eg. example@email.com" />
+					<Validation className={"wrap-input100 validate-input"} data-validate = "Valid email is required: ex@abc.xyz" isValid={errors && errors.email}> 
+						<Input id="email" type="email" placeholder="Eg. example@email.com" name="email" ref={register({required: true})}/>
 						<Focus />
 					</Validation>
 	
 					<Label for="phone" title="Enter hone number" />
-					<Validation styling="wrap-input100">
-						<Input id="phone" class="input100" placeholder="Eg. +48 800 000 000" />
+					<Validation className="wrap-input100">
+						<Input id="phone" class="input100" valuer="not-needed" placeholder="Eg. +48 800 000 000" />
 						<Focus />
 					</Validation>
 					
 					<Label for="message" title="Message *" />
-					<Validation styling="wrap-input100 validate-input" data-validate = "Message is required">
-						<textarea id="message" class="input100"  placeholder="Write us a message" ></textarea>
+					<Validation className={"wrap-input100 validate-input"} data-validate = "Message is required" isValid={errors && errors.message}>
+						<textarea id="message" class="input100"  placeholder="Write us a message" name="message" ref={register({required: true})}></textarea>
 						<Focus />
 					</Validation>
 	
