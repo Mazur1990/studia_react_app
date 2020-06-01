@@ -5,25 +5,16 @@ import { Input } from './contac_components/Input';
 import { Focus } from './contac_components/Focus';
 import { useForm } from "react-hook-form";
 
-
-
-
-
 const ContactSectionOne = () => {
 
 	const {handleSubmit, register, errors, reset} = useForm();
  
-
-
-
 	const onSubmit = (data) => {
 		alert('Message has been sent')
 
 		reset();
 		
 	}
-
-
 
 		return (
 			<section id="kontakt">
@@ -33,18 +24,6 @@ const ContactSectionOne = () => {
 					<span class="contact100-form-title">
 						Send Us A Message
 					</span>
-
-					
-					{/* <Label for="first-name" title="Tell us your name *" />
-					<Validation className={'wrap-input100 rs1-wrap-input100 validate-input'  } data-validate="Type first name" isValid={errors && errors.firstName && "alert-validate"}>
-						<Input id="first-name"  placeholder="First name" name="firstName" ref={register({required: true})}/>
-						<Focus />
-					</Validation>
-				//nawiasy []
-					<Validation className={["wrap-input100 rs1-wrap-input100 validate-input ", addClass]}>
-						<Input id="last-name"  placeholder="Last name" name="lastName" ref={register({required: true})}/>
-						<Focus />
-					</Validation> */}
 
 				<Label for="first-name" title="Tell us your name *" />
 					<Validation className={'wrap-input100 rs1-wrap-input100 validate-input' } data-validate="Type first name" isValid={errors && errors.firstName}>
@@ -58,13 +37,13 @@ const ContactSectionOne = () => {
 					</Validation>
 				
 					<Label for="email" title="Enter your email *" />
-					<Validation className={"wrap-input100 validate-input"} data-validate = "Valid email is required: ex@abc.xyz" isValid={errors && errors.email}> 
+					<Validation className={'wrap-input100 validate-input'} data-validate = "Valid email is required: ex@abc.xyz" isValid={errors && errors.email}> 
 						<Input id="email" type="email" placeholder="Eg. example@email.com" name="email" ref={register({required: true})}/>
 						<Focus />
 					</Validation>
 	
 					<Label for="phone" title="Enter hone number" />
-					<Validation className="wrap-input100">
+					<Validation className={"wrap-input100 "}>
 						<Input id="phone" class="input100" valuer="not-needed" placeholder="Eg. +48 800 000 000" />
 						<Focus />
 					</Validation>

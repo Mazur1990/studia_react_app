@@ -5,5 +5,4 @@ const Focus = () => {
 					<span class="focus-input100"></span>
         )
 }
-
 export { Focus }
