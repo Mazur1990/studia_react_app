@@ -9,10 +9,6 @@ class WeatherSectionOne extends Component{
         current:{
             "temp": 0,
             "date": "",
-            // "humidity":"?"
-            //wartosci poczatkowe z API wtedy nei trzeba ifow w konstrukcji
-            // main:{temp:0}
-            //weather:[]
         },
         days: []
     }
@@ -20,13 +16,12 @@ class WeatherSectionOne extends Component{
     handleInfo = () => {
         const value = this.refs.city.value
 
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${value}&appid=a2cb26e617cc58ac37a49b5139b69f8b`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${value}&appid=a2cb26e617cc58ac37a49b5139b69f8b`)
         .then(res => res.json())
         .then(temp => {
             temp = temp.list
             console.log(temp)
             this.setState({current: temp[0], days: temp.slice(1, 6)})
-            // console.log(temp)
         })
         .catch(err => alert("nie bangla"))
             
@@ -51,9 +46,8 @@ class WeatherSectionOne extends Component{
         
                             <div className="mainParam d-flex justify-content-center">
                                 <div className="col d-flex mainParam-left">
-                                {/* current.main ? current.main.temp : 0 */}
                                     <WeatherTemp temperature={ current.main ? (Math.floor(current.main.temp - 273.15)) : 0}/>
-                                   {current.weather && <WeatherIcon icon={`http://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`}/>} 
+                                   {current.weather && <WeatherIcon icon={`https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`}/>} 
                                 </div>
                                 <div className="col d-flex mainParam-right ">
                                         <ul>
@@ -84,7 +78,7 @@ class WeatherSectionOne extends Component{
                                         {days.map(item => 
                                              <li>
                                                 <WeatherDay day={item.dt_txt.slice(11,16)} />
-                                                <WeatherIcon icon={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}/>
+                                                <WeatherIcon icon={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}/>
                                                 <WeatherTemp temperature={(Math.floor(item.main.temp - 273.15))} />
                                               </li>
                                             )}
