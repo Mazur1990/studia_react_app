@@ -23,7 +23,7 @@ class WeatherSectionOne extends Component{
             console.log(temp)
             this.setState({current: temp[0], days: temp.slice(1, 6)})
         })
-        .catch(err => alert("nie bangla"))
+        .catch(err => alert("Coś poszło nie tak"))
             
 
     }
